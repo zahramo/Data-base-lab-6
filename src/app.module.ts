@@ -7,7 +7,7 @@ import UserEntity from './db/entity/user.entity';
 import BooksModule from './Books/books.module';
 import GenreModule from './Genre/genre.module';
 import BookEntity from './db/entity/book.entity';
-import GenreEntity from './db/entity/genre.entity';
+import GenreEntity from './db/entity/genre.entity'; 
 
 @Module({
   imports: [UserModule ,
