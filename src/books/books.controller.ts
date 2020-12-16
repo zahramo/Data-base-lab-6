@@ -6,8 +6,8 @@ import CreateBookDto from './dto/create-book.dto';
 export default class BooksController {
   constructor(private readonly bookServices: BooksService) {}
   @Post('post')
-  postGenre( @Body() genre: CreateBookDto) {
-    return this.bookServices.insert(genre);
+  postGenre( @Body() book: CreateBookDto) {
+    return this.bookServices.insert(book);
   }
   @Get()
   getAll() {
