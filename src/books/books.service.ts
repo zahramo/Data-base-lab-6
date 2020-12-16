@@ -24,4 +24,9 @@ export class BooksService {
     // const user: UserEntity = await UserEntity.findOne({where: {id: 2}, relations: ['books']});
     return BookEntity.find();
   }
+
+  async deleteBook(bookId: Number): Promise<BookEntity> {
+    const book: BookEntity = await BookEntity.findOne({where: {id: bookId}});
+    return book.remove();
+  }
 }
