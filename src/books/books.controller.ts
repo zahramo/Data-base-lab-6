@@ -17,7 +17,7 @@ export default class BooksController {
   }
 
   @Delete()
-  deleteBook( @Param() bookId: Number) {
+  deleteBook( @Param('bookId') bookId: number) {
       return this.bookServices.deleteBook(bookId)
   }
 

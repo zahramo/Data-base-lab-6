@@ -25,8 +25,8 @@ export class BooksService {
     return BookEntity.find();
   }
 
-  async deleteBook(bookId: Number): Promise<BookEntity> {
-    const book: BookEntity = await BookEntity.findOne({where: {id: bookId}});
+  async deleteBook(bookId: number): Promise<BookEntity> {
+    const book: BookEntity = await BookEntity.findOne(bookId);
     return book.remove();
   }
 }
