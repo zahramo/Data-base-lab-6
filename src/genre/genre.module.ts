@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import GenreServices from './genre.services';
-import GenreController from './genre.controller';
+import { GenreController } from './genre.controller';
+import { GenreService } from './genre.service';
+
 @Module({
-  imports: [],
   controllers: [GenreController],
-  providers: [GenreServices],
+  providers: [GenreService]
 })
-export default class GenreModule {}
+export class GenreModule {}
