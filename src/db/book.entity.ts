@@ -5,6 +5,13 @@ import GenreEntity from './genre.entity';
 @Entity()
 export default class BookEntity extends BaseEntity 
 {
+  @ManyToOne(type => UserEntity, user => user.books)
+  user: UserEntity;
+
+  @ManyToMany(type => GenreEntity)
+  @JoinTable()
+  genres: GenreEntity[];
+
   @PrimaryGeneratedColumn()
   id: number;
 
