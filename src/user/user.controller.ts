@@ -9,7 +9,6 @@ export class UserController {
 //'postUser()' will handle the creating of new User
   @Post('post')
   postUser( @Body() user: CreateUserDto) {
-    console.log("add a user")
     return this.usersServices.insert(user);
   }
 // 'getAll()' returns the list of all the existing users in the database

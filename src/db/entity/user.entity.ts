@@ -11,6 +11,6 @@ export default class UserEntity extends BaseEntity {
   @Column({ length: 500 })
   name: string;
 
-  @Column({ length: 500, nullable: true})
+  @Column({ length: 500 })
   password: string;
 }
