@@ -22,4 +22,10 @@ export class UserServices {
     const user: UserEntity = await UserEntity.findOne({where: {id: userID}, relations: ['books']});
     return user.books;
   }
+
+  async findOne(userName: string): Promise<UserEntity | undefined> {
+    return UserEntity.findOne({where: {name: userName}});
+  }
+
+  
 }
