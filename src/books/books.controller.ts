@@ -18,16 +18,22 @@ export default class BooksController {
   }
 
   @Get()
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthGuard)
   getAll() {
     return this.bookServices.getAllBooks();
   }
 
   @Delete()
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthGuard)
   deleteBook( @Param('bookId') bookId: number) {
       return this.bookServices.deleteBook(bookId)
   }
 
   @Put()
+  @ApiBearerAuth()
+  @UseGuards(JwtAuthGuard)
   changeBook(@Body() book: ChangeBookDto) {
       return this.bookServices.changeBook(book)
   }
